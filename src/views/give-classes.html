@@ -42,15 +42,13 @@
                     </div>
 
                     <div class="input-block">
-                        <label for="avatar">Link da sua foto <small>(começa https://) </small></label>
+                        <label for="avatar">Link da sua foto <small>(começa com https://) </small></label>
                         <input name="avatar" id="avatar" type="url" required>
                     </div>
-
                     <div class="input-block">
-                        <label for="whatsapp">Whatsapp <small>(começa numero) </small></label>
+                        <label for="whatsapp">Whatsapp <small>(somente números) </small></label>
                         <input name="whatsapp" id="whatsapp" type="number" required>
                     </div>
-
                     <div class="textarea-block">
                         <label for="bio">Biografia</label>
                         <textarea name="bio" id="bio" required></textarea>
@@ -61,7 +59,12 @@
                     <div class="select-block">
                         <label for="subject">Matéria</label>
                         <select name="subject" id="subject" required>
-                            <option value="">Selecione uma opção</option>
+                            {%for subject in subjects %}
+                            <option value="{{loop.index}}">
+                                {{subject}}
+                            </option>
+                            {%endfor%}
+                            <!-- <option value="">Selecione uma opção</option>
                             <option value="" disabled="" hidden="">Selecione uma opção</option>
                             <option value="1">Artes</option>
                             <option value="2">Biologia</option>
@@ -72,17 +75,16 @@
                             <option value="7">História</option>
                             <option value="8">Matemática</option>
                             <option value="9">Português</option>
-                            <option value="10">Química</option>
+                            <option value="10">Química</option> -->
                         </select>
                     </div>
                     <div class="input-block">
                         <label for="cost">Custo da sua hora/aula
                             <small>(R$)</small>
                         </label>
-                        <input type="cost" id="cost" type="number" required>
+                        <input name="cost" type="cost" id="cost" type="number" required>
                     </div>
                 </fieldset>
-
                 <fieldset id="schedule-items">
                     <legend>Horários disponíveis
                         <button type="button" id="add-time"> + Novo Horário</button>
@@ -91,14 +93,19 @@
                         <div class="select-block">
                             <label for="weekday">Dia da semana</label>
                             <select name="weekday[]" required>
-                                <option value="">Selecione uma opção</option>
+                                {%for weekday in weekdays%}
+                                <option value="{{loop.index0}}">
+                                    {{weekday}}
+                                </option>
+                                {%endfor%}
+                                <!-- <option value="">Selecione uma opção</option>
                                 <option value="0">Domingo</option>
                                 <option value="1">Segunda-feira</option>
                                 <option value="2">Terça-feira</option>
                                 <option value="3">Quarta-feira</option>
                                 <option value="4">Quinta-feira</option>
                                 <option value="5">Sexta-feira</option>
-                                <option value="6">Sábado</option>
+                                <option value="6">Sábado</option> -->
                             </select>
                         </div>
                         <div class="input-block">
@@ -112,8 +119,6 @@
                         </div>
                     </div>
 
-                    
-
                 </fieldset>
             </form>
             <footer>
@@ -126,7 +131,5 @@
             </footer>
         </main>
     </div>
-
 </body>
-
 </html>

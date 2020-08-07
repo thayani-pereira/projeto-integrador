@@ -4,7 +4,7 @@
 }
 
 #search-teachers {
-  margin: 3.2rem;
+  margin-top: 3.2rem;
 }
 #search-teachers label {
   color: var(--color-text-in-primary);
@@ -26,7 +26,7 @@
   justify-content: center;
   text-decoration: none;
   transition: background 0.2s;
-  margin: 3.2rem;
+  margin: 3.2rem 0;
 }
 #search-teachers button:hover {
   background-color: var(--color-secondary-dark);

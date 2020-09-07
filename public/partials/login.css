@@ -12,6 +12,13 @@ textarea {
   color: var(--color-title-in-primary);
 }
 
+input,
+button,
+textarea {
+  color: var(--color-text-base);
+}
+
+
 .container {
   display: flex;
   flex-direction: column;
@@ -81,6 +88,10 @@ textarea {
 .form-group:first-child {
   border-top: unset;
   margin: unset;
+}
+
+.form-group:focus-within label {
+  transform: translate(0px, 12px) scale(0.75);
 }
 
 .form-group label {

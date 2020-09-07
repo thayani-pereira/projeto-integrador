@@ -97,7 +97,15 @@ async function saveClasses(req, res) {
         console.log(error)
     }
 }
+async function pageLogin(req, res) {
+    //caso haja erro na hora da consulta do banco
+    try {
+        return res.render('login.html', { })
 
+    } catch (error) {
+        console.log(error)
+    }
+}
 
 
 module.exports = {
@@ -105,5 +113,6 @@ module.exports = {
     pageStudy,
     pageAluno,
     pageGiveclasses,
-    saveClasses
+    saveClasses,
+    pageLogin
 }

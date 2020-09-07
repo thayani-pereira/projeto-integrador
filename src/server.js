@@ -2,7 +2,7 @@
 //Servidor
 const express = require('express')
 const server = express()
-const {pageLanding,pageStudy,pageGiveclasses,saveClasses} =require('./pages')
+const {pageLanding,pageStudy, pageAluno,pageGiveclasses,saveClasses} =require('./pages')
 
 //conf nunjucks (template engine)
 const nunjucks = require('nunjucks')
@@ -19,6 +19,7 @@ server
     //rotas
     .get("/", (pageLanding))
     .get("/study", (pageStudy))
+    .get("/aluno", (pageAluno))
     .get("/give-classes", (pageGiveclasses))
     .post("/save-classes", saveClasses )
     //start do servidor

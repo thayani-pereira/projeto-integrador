@@ -1,4 +1,4 @@
-//procurar o botão
+// //procurar o botão
 document.querySelector("#add-time")
 .addEventListener("click", cloneField)
 //quando clicar no botão
@@ -16,4 +16,3 @@ function cloneField(){
  //colocar na página
  document.querySelector("#schedule-items").appendChild(newFiedContainer)
 }
-

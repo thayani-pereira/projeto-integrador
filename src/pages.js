@@ -48,6 +48,17 @@ async function pageStudy(req, res) {
         console.log(error)
     }
 }
+
+async function pageAluno(req, res) {
+    //caso haja erro na hora da consulta do banco
+    try {
+        return res.render('aluno.html', { subjects, weekdays })
+
+    } catch (error) {
+        console.log(error)
+    }
+}
+
 async function pageGiveclasses(req, res) {
     return res.render("give-classes.html", { subjects, weekdays })
 }
@@ -92,6 +103,7 @@ async function saveClasses(req, res) {
 module.exports = {
     pageLanding,
     pageStudy,
+    pageAluno,
     pageGiveclasses,
     saveClasses
 }

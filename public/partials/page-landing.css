@@ -46,11 +46,11 @@
 }
 
 .buttons-container a.give-classes:hover {
-  background: var(--color-secondary-dark);
+  background: var(--color-secundary-dark);
 }
 
 .buttons-container a.give-classes {
-  background: var(--color-secondary);
+  background: var(--color-secundary);
   margin-right: 0;
 }
 .buttons-container a img {

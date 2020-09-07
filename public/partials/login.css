@@ -12,7 +12,7 @@ textarea {
   color: var(--color-title-in-primary);
 }
 
-.eSbheu {
+.container {
   display: flex;
   flex-direction: column;
   -webkit-box-align: center;
@@ -21,7 +21,7 @@ textarea {
   justify-content: center;
 }
 
-.eSwYtm {
+.header-logo {
   width: 100vw;
   height: 40vh;
   background-image: url("./../img/success-background.svg");
@@ -37,13 +37,13 @@ textarea {
   overflow: hidden;
 }
 
-.eSwYtm .logo {
+.header-logo .logo {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-.fxWvvr {
+.container-login {
   width: 90vw;
   height: 60vh;
   display: flex;
@@ -52,38 +52,38 @@ textarea {
   align-items: center;
 }
 
-.fxWvvr form {
+.container-login form {
   margin-top: 2rem;
   width: 100%;
   max-width: 350px;
 }
 
-.fxWvvr form h1 {
+.container-login form h1 {
   font: 600 3.6rem Poppins;
   color: var(--color-text-title);
   margin-bottom: 2.4rem;
 }
 
-.fxWvvr form .inputs {
+.container-login form .inputs {
   background: var(--color-input-background);
   border-radius: 0.8rem;
   border: 1px solid var(--color-line-in-white);
   margin-bottom: 2.4rem;
 }
 
-.bcMPWx {
+.form-group {
   position: relative;
   width: 100%;
   border-top: 1px solid var(--color-line-in-white);
   margin: 0px;
 }
 
-.bcMPWx:first-child {
+.form-group:first-child {
   border-top: unset;
   margin: unset;
 }
 
-.bcMPWx label {
+.form-group label {
   position: absolute;
   pointer-events: none;
   padding: 0px 1.2rem;
@@ -94,11 +94,11 @@ textarea {
   transition: all 0.2s ease-out 0s;
 }
 
-.bcMPWx .input {
+.form-group .input {
   display: flex;
 }
 
-.bcMPWx input {
+.form-group input {
   width: 100%;
   height: 5.6rem;
   background: var(--color-input-background);
@@ -108,7 +108,7 @@ textarea {
   font: 1.6rem Archivo;
 }
 
-.bcMPWx .input button {
+.form-group .input button {
   background: none;
   border: none;
   margin-right: 1rem;
@@ -121,7 +121,7 @@ textarea {
   cursor: pointer;
 }
 
-.fxWvvr form .login-options {
+.container-login form .login-options {
   display: flex;
   -webkit-box-align: center;
   align-items: center;
@@ -130,7 +130,7 @@ textarea {
   margin-bottom: 3rem;
 }
 
-.bJCmFu label {
+.form-ckeck label {
   display: flex;
   -webkit-box-align: center;
   align-items: center;
@@ -138,13 +138,13 @@ textarea {
   color: var(--color-text-complement);
 }
 
-.bJCmFu label .check {
+.form-ckeck label .check {
   margin-right: 0.8rem;
   border-radius: 0.8rem;
   cursor: pointer;
 }
 
-.fxWvvr form .login-options a {
+.container-login form .login-options a {
   text-decoration: none;
   font: 400 14px Poppins;
   color: var(--color-text-complement);
@@ -152,7 +152,7 @@ textarea {
   transition: opacity 0.2s ease 0s;
 }
 
-.fxWvvr form .submit-button {
+.container-login form .submit-button {
   width: 100%;
   height: 5.6rem;
   display: flex;
@@ -170,7 +170,7 @@ textarea {
   transition: background 0.2s ease 0s;
 }
 
-.cVmQYF {
+.footer {
   width: 100%;
   max-width: 350px;
   display: flex;
@@ -180,37 +180,37 @@ textarea {
   font: 400 16px Poppins;
 }
 
-.cVmQYF span {
+.footer span {
   max-width: 20rem;
   color: var(--color-primary);
 }
 
-.cVmQYF span a {
+.footer span a {
   font-weight: bold;
   color: var(--color-primary);
   opacity: 1;
   transition: opacity 0.2s ease 0s;
 }
 
-.cVmQYF span + span {
+.footer span + span {
   font-size: 1.4rem;
   color: var(--color-text-complement);
 }
 
-.cVmQYF span + span {
+.footer span + span {
   font-size: 1.4rem;
   color: var(--color-text-complement);
 }
 
 @media (min-width: 1100px) {
-  .eSbheu {
+  .container {
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "logo content";
   }
 
-  .eSwYtm {
+  .header-logo {
     grid-area: logo / logo / logo / logo;
     background-position: center center;
     background-size: contain;
@@ -218,7 +218,7 @@ textarea {
     width: 60vw;
   }
 
-  .fxWvvr {
+  .container-login {
     grid-area: content / content / content / content;
     height: 100vh;
     width: 40vw;
@@ -226,12 +226,12 @@ textarea {
     justify-content: center;
   }
 
-  .fxWvvr form {
+  .container-login form {
     -webkit-box-align: center;
     align-items: center;
   }
 
-  .cVmQYF {
+  .footer {
     -webkit-box-align: center;
     align-items: center;
 }
